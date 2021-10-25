@@ -5,9 +5,33 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- 使用 context 命名空间 ,在配置文件中开启相应的注解处理器 -->
-    <context:annotation-config/>
-    <!--使用 context 命名空间 ,通知Spring扫描指定包下所有Bean类，进行注解解析-->
-    <context:component-scan base-package="com.wyt.spring02"/>
+    <bean id="student" class="com.wyt.spring02.Student">
+        <property name="id" value="11" />
+        <property name="name" value="张三" />
+    </bean>
+
+    <bean id="student123"
+          class="com.wyt.spring02.Student">
+        <property name="id" value="123" />
+        <property name="name" value="KK123" />
+    </bean>
+
+    <bean id="student100"
+          class="com.wyt.spring02.Student">
+        <property name="id" value="100" />
+        <property name="name" value="KK100" />
+    </bean>
+
+    <bean id="class1" class="com.wyt.spring02.Klass">
+        <property name="students">
+            <list>
+                <ref bean="student100" />
+                <ref bean="student123" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="school" class="com.wyt.spring02.School" autowire="byName"/>
+
 
 </beans>
