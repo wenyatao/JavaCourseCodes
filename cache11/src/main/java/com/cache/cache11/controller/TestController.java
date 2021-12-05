@@ -1,21 +1,24 @@
 package com.cache.cache11.controller;
 
-import lombok.RequiredArgsConstructor;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 @RestController
-@RequiredArgsConstructor
 public class TestController {
 
-    private final Redisson redisson;
-    private final RedisTemplate<String, Integer> redisTemplate;
+    @Autowired
+    private  Redisson redisson;
+
+    @Resource
+    private RedisTemplate <String, Integer> redisTemplate;
 
 
     /**

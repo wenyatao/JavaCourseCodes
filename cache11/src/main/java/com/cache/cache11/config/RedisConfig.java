@@ -65,7 +65,7 @@ public class RedisConfig {
     public Redisson redisson(){
         //初始化redisson客户端，单机模式
         Config config=new Config();
-        config.useSingleServer().setAddress("redis://127.0.0.1:6379").setDatabase(0).setPassword("123456");
+        config.useSingleServer().setAddress("redis://127.0.0.1:6379").setDatabase(0);
         return (Redisson)Redisson.create(config);
     }
 }
