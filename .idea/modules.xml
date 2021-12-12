@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/concurrency04/concurrency04.iml" filepath="$PROJECT_DIR$/concurrency04/concurrency04.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/01jvm/jvm01.iml" filepath="$PROJECT_DIR$/01jvm/jvm01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mq12/mq12.iml" filepath="$PROJECT_DIR$/mq12/mq12.iml" />
       <module fileurl="file://$PROJECT_DIR$/nio02/nio02.iml" filepath="$PROJECT_DIR$/nio02/nio02.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring05/spring05.iml" filepath="$PROJECT_DIR$/spring05/spring05.iml" />
     </modules>
